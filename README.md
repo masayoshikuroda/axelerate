@@ -14,11 +14,17 @@ $ docker build . -t axelerate
 ```
 run container
 ```
-$ docker run -it --rm axelerate
+$ docker run -it --rm --name axelerate axelerate:latest
 ```
 ## santa_uno
 ```
-$ python3 axelerate/train.py -c configs/santa_uno.json
-$ ls projects/santa_uno_classifier/yyy-MM-dd_HH-mm-ss/classifier_best_loss.kmodel
-$ cat projects/santa_uno_classifier/labels.txt
+# cd /root/aXeleRate/
+# python3 axelerate/train.py -c configs/santa_uno.json
+# cd projects
+# zip -r santa_uno_classifier.zip santa_uno_classifier/
+
+% docker cp axelerate:/root/aXeleRate/projects/santa_uno_classifier.zip .
+% unzip santa_uno_classifier.zip 
+% ls santa_uno_classifier/yyy-MM-dd_HH-mm-ss/classifier_best_loss.kmodel
+% cat santa_uno_classifier/labels.txt
 ```
