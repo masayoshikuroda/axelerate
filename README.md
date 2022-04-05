@@ -19,4 +19,6 @@ $ docker run -it --rm axelerate
 ## santa_uno
 ```
 $ python3 axelerate/train.py -c configs/santa_uno.json
+$ ls projects/santa_uno_classifier/yyy-MM-dd_HH-mm-ss/classifier_best_loss.kmodel
+$ cat projects/santa_uno_classifier/labels.txt
 ```
